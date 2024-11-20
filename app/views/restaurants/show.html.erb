@@ -1,0 +1,15 @@
+<h1><%= @restaurant.name %></h1>
+<p><strong>Address:</strong> <%= @restaurant.address %></p>
+<p><strong>Category:</strong> <%= @restaurant.category %></p>
+
+<h2>Reviews</h2>
+<% if @reviews.any? %>
+  <% @reviews.each do |review| %>
+    <div class="review">
+      <p><strong>Rating:</strong> <%= review.rating %></p>
+      <p><strong>Content:</strong> <%= review.content %></p>
+    </div>
+  <% end %>
+<% else %>
+  <p>No reviews yet.</p>
+<% end %>

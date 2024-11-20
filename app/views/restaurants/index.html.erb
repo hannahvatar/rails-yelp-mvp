@@ -1,0 +1,14 @@
+<div class="container mt-5">
+<h1>Restaurants</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <strong><%= restaurant.name %></strong><br>
+      Address: <%= restaurant.address %><br>
+      Category: <%= restaurant.category %><br>
+      Reviews: <%= restaurant.reviews %><br>
+    </li>
+  <% end %>
+</ul>
+</div>

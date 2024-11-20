@@ -1,0 +1,8 @@
+
+<%= simple_form_for(restaurant) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :category %>
+   <%= f.input :rating, as: :integer, input_html: { min: 1, max: 5, step: 1 } %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

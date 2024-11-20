@@ -7,4 +7,5 @@ class Restaurant < ApplicationRecord
     in: ["chinese", "italian", "japanese", "french", "belgian"],
     message: "%{value} is not a valid category"
   }
+  validates :rating, numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 5 }
 end
